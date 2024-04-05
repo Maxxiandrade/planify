@@ -99,14 +99,12 @@ export const ServiceSlice = createSlice({
             state.progress.progress = action.payload
         },
         changeProgress: (state, action: PayloadAction<string>) =>{
-            console.log(action.payload);
-            
+
             state.progress.status = action.payload
         },
         addReservation: (state, action: PayloadAction<{ service: string; dateSelected: DateSelected }>) => {
             const newReservation = action.payload;
             state.reservation.reservations.push(newReservation);
-            console.log(state.reservation.reservations[0]);
         }
     }
 })
